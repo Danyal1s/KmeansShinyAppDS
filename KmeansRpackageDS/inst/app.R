@@ -1,4 +1,8 @@
 library (shiny)
+library(devtools)
+  devtools::document()
+library(roxygen2)
+library(KmeansRpackageDS)
 
 ui <- fluidPage(
 
@@ -28,7 +32,7 @@ server <- function(input, output, session) {
     iris[, c(input$xcol, input$ycol)]
   })
 
-  clusters <- reactive(my_clusters(selectedData(), input$clusters))
+  clusters <- reactive({my_clusters(selectedData(), input$clusters)})
 
   output$plot1 <- renderPlot ({
     palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
