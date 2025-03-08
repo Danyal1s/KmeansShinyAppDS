@@ -16,7 +16,7 @@
 #' @examples
 #' R code here showing how your function works
 #'
-my_clusters = function(xy_data, cluster_value) {
+my_clusters <- function(xy_data, cluster_value) {
 
   cluster_list <- reactive({
     kmeans(xy_data, cluster_value)
