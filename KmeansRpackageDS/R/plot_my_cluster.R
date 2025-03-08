@@ -17,8 +17,7 @@
 #' @examples
 #' R code here showing how your function works
 #'
-plot_my_cluster = function(xy_data, cluster_data) {
-  clusterPlot <- plot(xy_data, col = cluster_data$cluster, pch = 20, cex = 3) +
-    points(cluster_data$centers, pch = 4, cex = 4, lwd = 4)
-  return(clusterPlot)
+plot_my_cluster <- function(xy_data, cluster_data) {
+  plot(xy_data, col = cluster_data$cluster, pch = 20, cex = 3)
+  points(cluster_data$centers, pch = 4, cex = 4, lwd = 4)
 }
